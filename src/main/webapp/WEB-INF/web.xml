@@ -142,6 +142,7 @@
     <servlet-name>viewEmployeesUnderClient</servlet-name>
     <url-pattern>/viewEmployeesUnderClient</url-pattern>
   </servlet-mapping>
+  
   <servlet>
     <description></description>
     <display-name>removeClientEmployee</display-name>
@@ -149,9 +150,10 @@
     <servlet-class>com.io.emscmsServlet.clientController.GetAllClientsServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>removeClientEmployeet</servlet-name>
+    <servlet-name>removeClientEmployee</servlet-name>
     <url-pattern>/removeClientEmployee</url-pattern>
   </servlet-mapping>
+  
   <servlet>
     <description></description>
     <display-name>addEmployeeToClient</display-name>
@@ -159,9 +161,10 @@
     <servlet-class>com.io.emscmsServlet.clientController.GetAllClientsServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>addEmployeeToClientt</servlet-name>
+    <servlet-name>addEmployeeToClient</servlet-name>
     <url-pattern>/addEmployeeToClient</url-pattern>
   </servlet-mapping>
+  
   
   
 </web-app>
