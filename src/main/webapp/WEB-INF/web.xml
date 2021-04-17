@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://Java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
- 
   <servlet>
     <description></description>
     <display-name>GetAllEmployeesServlet</display-name>
@@ -11,6 +10,158 @@
     <servlet-name>GetAllEmployeesServlet</servlet-name>
     <url-pattern>/getAllEmployees</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>EditServlet</display-name>
+    <servlet-name>EditServlet</servlet-name>
+    <servlet-class>com.io.emscmsServlet.employeeController.GetAllEmployeesServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EditServlet</servlet-name>
+    <url-pattern>/edit</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UpdateEmployeeServlet</display-name>
+    <servlet-name>UpdateEmployeeServlet</servlet-name>
+    <servlet-class>com.io.emscmsServlet.employeeController.GetAllEmployeesServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateEmployeeServlet</servlet-name>
+    <url-pattern>/updateEmployee</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DeleteEmployee</display-name>
+    <servlet-name>DeleteEmployee</servlet-name>
+    <servlet-class>com.io.emscmsServlet.employeeController.GetAllEmployeesServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteEmployee</servlet-name>
+    <url-pattern>/deleteEmployee</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddEmployee</display-name>
+    <servlet-name>AddEmployee</servlet-name>
+    <servlet-class>com.io.emscmsServlet.employeeController.GetAllEmployeesServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddEmployee</servlet-name>
+    <url-pattern>/addEmployee</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ViewClients</display-name>
+    <servlet-name>ViewClients</servlet-name>
+    <servlet-class>com.io.emscmsServlet.employeeController.GetAllEmployeesServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ViewClients</servlet-name>
+    <url-pattern>/viewClientsUnderEmployee</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>removeEmployeeClient</display-name>
+    <servlet-name>removeEmployeeClient</servlet-name>
+    <servlet-class>com.io.emscmsServlet.employeeController.GetAllEmployeesServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>removeEmployeeClient</servlet-name>
+    <url-pattern>/removeEmployeeClient</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>addClientToEmployee</display-name>
+    <servlet-name>addClientToEmployee</servlet-name>
+    <servlet-class>com.io.emscmsServlet.employeeController.GetAllEmployeesServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>addClientToEmployee</servlet-name>
+    <url-pattern>/addClientToEmployee</url-pattern>
+  </servlet-mapping>
  
- 
+  <servlet>
+    <description></description>
+    <display-name>GetAllClientsServlet</display-name>
+    <servlet-name>GetAllClientsServlet</servlet-name>
+    <servlet-class>com.io.emscmsServlet.clientController.GetAllClientsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetAllClientsServlet</servlet-name>
+    <url-pattern>/getAllClients</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>addClient</display-name>
+    <servlet-name>addClient</servlet-name>
+    <servlet-class>com.io.emscmsServlet.clientController.GetAllClientsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetAllClientsServlet</servlet-name>
+    <url-pattern>/addClient</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>deleteClient</display-name>
+    <servlet-name>deleteClient</servlet-name>
+    <servlet-class>com.io.emscmsServlet.clientController.GetAllClientsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>deleteClient</servlet-name>
+    <url-pattern>/deleteClient</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>editClient</display-name>
+    <servlet-name>editClient</servlet-name>
+    <servlet-class>com.io.emscmsServlet.clientController.GetAllClientsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>deleteClient</servlet-name>
+    <url-pattern>/editClient</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>updateClient</display-name>
+    <servlet-name>updateClient</servlet-name>
+    <servlet-class>com.io.emscmsServlet.clientController.GetAllClientsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>updateClient</servlet-name>
+    <url-pattern>/updateClient</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>viewEmployeesUnderClient</display-name>
+    <servlet-name>viewEmployeesUnderClient</servlet-name>
+    <servlet-class>com.io.emscmsServlet.clientController.GetAllClientsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>viewEmployeesUnderClient</servlet-name>
+    <url-pattern>/viewEmployeesUnderClient</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>removeClientEmployee</display-name>
+    <servlet-name>removeClientEmployee</servlet-name>
+    <servlet-class>com.io.emscmsServlet.clientController.GetAllClientsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>removeClientEmployeet</servlet-name>
+    <url-pattern>/removeClientEmployee</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>addEmployeeToClient</display-name>
+    <servlet-name>addEmployeeToClient</servlet-name>
+    <servlet-class>com.io.emscmsServlet.clientController.GetAllClientsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>addEmployeeToClientt</servlet-name>
+    <url-pattern>/addEmployeeToClient</url-pattern>
+  </servlet-mapping>
+  
+  
 </web-app>

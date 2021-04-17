@@ -62,7 +62,7 @@ a {
 			<c:out value="${i}"></c:out>
 		</h1>
 		<div id="ems">
-			<a href="servletProject/getAllClients">Client Management System</a>
+			<a href="/servletProject/getAllClients">Client Management System</a>
 		</div>
 		<div id="cms">
 			<a href="/servletProject/getAllEmployees">Employee Management

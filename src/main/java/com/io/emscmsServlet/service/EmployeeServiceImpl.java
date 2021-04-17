@@ -54,15 +54,15 @@ public class EmployeeServiceImpl implements EmployeeService {
 	}
 
 	@Override
-	public void addClientToEmployee(Employees employeeData, Client clientData) {
-		employeeDAO.addClientToEmployee(employeeData, clientData);
-		clientService.updateEmployeeIds(employeeData, clientData);
+	public void addClientToEmployee(String employeeId, String clientId) {
+		employeeDAO.addClientToEmployee(employeeId, clientId);
+		clientService.updateEmployeeIds(employeeId, clientId);
 
 	}
 
 	@Override
-	public void updateClientIds(Employees employees, Client client) {
-		employeeDAO.addClientToEmployee(employees, client);
+	public void updateClientIds(String employeesId, String clientId) {
+		employeeDAO.addClientToEmployee(employeesId, clientId);
 	}
 
 	@Override
@@ -104,6 +104,14 @@ public class EmployeeServiceImpl implements EmployeeService {
 	@Override
 	public void deleteClientFromEmployee(String employeeId, String clientId) {
 		employeeDAO.deleteClientFromEmployee(employeeId, clientId);
+		clientService.deleteEmployeeFromClient(clientId, employeeId);
+
+	}
+
+	@Override
+	public void deleteEmployeeFromClientForClient(String employeeId, String clientId) {
+		employeeDAO.deleteClientFromEmployee(employeeId, clientId);
+		
 	}
 
 

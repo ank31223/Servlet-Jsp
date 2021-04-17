@@ -62,8 +62,8 @@ public class ClientServiceImpl implements ClientService {
 	}
 
 	@Override
-	public void updateEmployeeIds(Employees employeeData, Client clientData) {
-		clientDAO.updateEmployeeIds(employeeData, clientData);
+	public void updateEmployeeIds(String employeeId, String clientId) {
+		clientDAO.updateEmployeeIds(employeeId, clientId);
 
 	}
 
@@ -88,8 +88,14 @@ public class ClientServiceImpl implements ClientService {
 		}
 		ClientEmployeeResponse clientEmployeeResponse2 = clientDAO
 				.addEmployeeToClient(clientEmployeeResponse.getClientList().get(0).getId(), employeeId);
-		employeeService.updateClientIds(clientEmployeeResponse2.getEmployeeList().get(0),
-				clientEmployeeResponse2.getClientList().get(0));
+		employeeService.updateClientIds(clientEmployeeResponse2.getEmployeeList().get(0).getId(),
+				clientEmployeeResponse2.getClientList().get(0).getId());
+	}
+	
+	@Override
+	public void addEmployeeToClient(String clientId, String employeeId) {
+		clientDAO.addEmployeeToClient(clientId, employeeId);
+		employeeService.updateClientIds(employeeId, clientId);
 	}
 
 	@Override
@@ -118,7 +124,13 @@ public class ClientServiceImpl implements ClientService {
 	public void deleteEmployeeFromClient(String clientId, String employeeId) {
 		clientDAO.deleteEmployeeFromClient(clientId, employeeId);
 	}
-
+	
+	@Override
+	public void deleteEmployeeFromClientForClient(String clientId, String employeeId) {
+		clientDAO.deleteEmployeeFromClient(clientId, employeeId);
+		employeeService.deleteEmployeeFromClientForClient(employeeId,clientId);
+	}
+	
 	@Override
 	public void deleteEmployeeFromClient(String clientId, List<Employees> employeeList, String employeeName) {
 		String employeeId = null;

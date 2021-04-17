@@ -26,7 +26,7 @@ public interface ClientService {
 
 	List<Client> getClientsByIds(List<Client> listClient);
 
-	void updateEmployeeIds(Employees employeeData, Client clientData);
+	void updateEmployeeIds(String employeeData, String clientData);
 
 	List<Employees> getAllEmployees();
 
@@ -41,4 +41,9 @@ public interface ClientService {
 	void deleteEmployeeFromClient(String clientId, String employeeId);
 
 	void deleteEmployeeFromClient(String clientId, List<Employees> employeeList, String clientName);
+
+	void deleteEmployeeFromClientForClient(String clientId, String employeeId);
+
+	void addEmployeeToClient(String clientId, String employeeId);
+
 }

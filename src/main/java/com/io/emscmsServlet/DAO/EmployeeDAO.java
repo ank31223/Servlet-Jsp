@@ -182,6 +182,7 @@ public class EmployeeDAO {
 			pst.setInt(6, salary);
 			pst.setString(7, gender);
 			pst.setString(8, emp.getName());
+			System.out.println(emp.getName());
 			System.out.println(pst.executeUpdate());
 			System.out.println("Employee has been updated successfully");
 		} catch (SQLException e) {
@@ -233,12 +234,12 @@ public class EmployeeDAO {
 		return employeeClientResponse;
 	}
 
-	public void addClientToEmployee(Employees employeeData, Client clientData) {
+	public void addClientToEmployee(String employeeId, String clientId) {
 		try {
 			String Query = "insert into ClientIds values(?,?)";
 			pst = con.prepareStatement(Query);
-			pst.setString(1, employeeData.getId());
-			pst.setString(2, clientData.getId());
+			pst.setString(1, employeeId);
+			pst.setString(2, clientId);
 			pst.executeUpdate();
 			System.out.println("client addedd Successfully");
 		} catch (Exception e) {

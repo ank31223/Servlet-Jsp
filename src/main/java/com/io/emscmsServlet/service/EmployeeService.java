@@ -21,9 +21,9 @@ public interface EmployeeService {
 
 	EmployeeClientResponse showAllAssignableClients(String employeeName);
 
-	void addClientToEmployee(Employees employeeData, Client clientData);
+	void addClientToEmployee(String employeeData, String clientData);
 
-	void updateClientIds(Employees employees, Client client);
+	void updateClientIds(String employees, String client);
 
 	List<Employees> getAllEmployeesByListOfIds(List<Employees> employeeList);
 
@@ -32,6 +32,8 @@ public interface EmployeeService {
 	void deleteClientFromEmployee(String id, List<Client> listClient, String clientName);
 
 	void deleteClientFromEmployee(String employeeId, String clientId);
+
+	void deleteEmployeeFromClientForClient(String employeeId, String clientId);
 
 
 }

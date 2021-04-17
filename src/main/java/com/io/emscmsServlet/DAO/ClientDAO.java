@@ -167,7 +167,7 @@ public class ClientDAO {
 		return list;
 	}
 
-	public void updateEmployeeIds(Employees employeeData, Client clientData) {
+	public void updateEmployeeIds(String employeeId, String clientId) {
 		try {
 //			String Query = "select * from EmployeeIds where employeeId=?";
 //			pst = con.prepareStatement(Query);
@@ -178,8 +178,8 @@ public class ClientDAO {
 			String Query = "insert into EmployeeIds values(?,?)";
 			
 			pst = con.prepareStatement(Query);
-			pst.setString(1, clientData.getId());
-			pst.setString(2, employeeData.getId());
+			pst.setString(1, clientId);
+			pst.setString(2, employeeId);
 			pst.executeUpdate();
 			System.out.println("EmployeeIds updated successfully");
 		} catch (Exception e) {

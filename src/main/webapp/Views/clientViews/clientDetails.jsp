@@ -6,7 +6,6 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
-
 <style>
 .header {
 	padding: 40px;
@@ -54,43 +53,38 @@ tr:hover {
 <body>
 
 	<div class="header">
-		<h1>Welcome to Employee Management System</h1>
-		<a href="/servletProject/Views/employeeViews/newEmployeeForm.jsp">Add Employee</a>
+		<h1>Welcome to Client Management System</h1>
+		<a href="/servletProject/Views/clientViews/newClientForm.jsp">Add
+			Client</a>
 	</div>
 
 
-	<div >
+	<div>
 
 		<table>
 			<tr>
 				<th>Id</th>
-				<th>First Name</th>
-				<th>Gender</th>
-				<th>Age</th>
-				<th>Contact No</th>
-				<th>Email</th>
-				<th>Designation</th>
-				<th>Salary</th>
-				<th>Edit</th>
-				<th>Delete</th>
-				<th>Show Clients</th>
+				<th>Client Name</th>
+				<th>Client Address</th>
+				<th>Edit Client</th>
+				<th>Delete Client</th>
+				<th>Show Employees</th>
 				
 
+
 			</tr>
-			<c:forEach var="emp" items="${employeeList}">
+			<c:forEach var="client" items="${clientList}">
 				<tr>
-					<td>${emp.getId()}</td>
-					<td>${emp.getName()}</td>
-					<td>${emp.getGender()}</td>
-					<td>${emp.getAge()}</td>
-					<td>${emp.getContactNo()}</td>
-					<td>${emp.getEmail()}</td>
-					<td>${emp.getDesignation()}</td>
-					<td>${emp.getSalary()}</td>
-					<td><a href="/servletProject/edit?name=${emp.getName()}">Edit</a></td>
-					<td><a href="/servletProject/deleteEmployee?name=${emp.getName()}">Delete</a></td>
-					<td><a href="/servletProject/viewClientsUnderEmployee?name=${emp.getName()}">ShowClients</a></td>
+					<td>${client.getId()}</td>
+					<td>${client.getCompanyName()}</td>
+					<td>${client.getCompanyAddress()}</td>
 					
+					<td><a href="/servletProject/editClient?clientName=${client.getCompanyName()}">Edit</a></td>
+					<td><a
+						href="/servletProject/deleteClient?clientName=${client.getCompanyName()}">Delete</a></td>
+					<td><a
+						href="/servletProject/viewEmployeesUnderClient?clientName=${client.getCompanyName()}">ShowEmployees</a></td>
+
 
 
 				</tr>
@@ -101,7 +95,6 @@ tr:hover {
 
 
 	</div>
-
 
 
 
