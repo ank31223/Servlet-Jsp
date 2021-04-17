@@ -45,5 +45,11 @@ public interface ClientService {
 	void deleteEmployeeFromClientForClient(String clientId, String employeeId);
 
 	void addEmployeeToClient(String clientId, String employeeId);
+	
+	String getClientIdByName(String clientName);
+	
+	void removeEmployeeIdFromEmployeeIds(String employeeId);
+	
+	void deleteClientIdFromAll(String clientId);
 
 }

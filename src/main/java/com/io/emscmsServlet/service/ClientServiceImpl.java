@@ -142,5 +142,23 @@ public class ClientServiceImpl implements ClientService {
 		deleteEmployeeFromClient(clientId, employeeId);
 		employeeService.deleteClientFromEmployee(employeeId, clientId);
 	}
+	
+	public String getClientIdByName(String clientName) {
+		return clientDAO.getClientByName(clientName).getId();
+	}
+
+	@Override
+	public void removeEmployeeIdFromEmployeeIds(String employeeId) {
+		clientDAO.removeEmployeeIdFromEmployeeIds(employeeId);
+	}
+
+	@Override
+	public void deleteClientIdFromAll(String clientId) {
+		clientDAO.deleteClientFromEmployeeIds(clientId);
+		employeeService.removeClientIdFromClientIds(clientId);
+		
+	}
+	
+	
 
 }

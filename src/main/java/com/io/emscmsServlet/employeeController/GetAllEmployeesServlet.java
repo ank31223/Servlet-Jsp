@@ -115,6 +115,9 @@ public class GetAllEmployeesServlet extends HttpServlet {
 	private void deleteEmployee(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		String eName = req.getParameter("name");
 		employeeService.removeEmployee(eName);
+		String employeeId=employeeService.getEmployeeIdByName(eName);
+		employeeService.deleteEmployeeIdFromAll(employeeId);
+		employeeService.removeEmployee(eName);
 		res.sendRedirect("/servletProject/getAllEmployees");
 
 	}

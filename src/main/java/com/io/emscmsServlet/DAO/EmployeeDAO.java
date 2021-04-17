@@ -336,6 +336,32 @@ public class EmployeeDAO {
 		}
 	}
 
+	public void deleteEmployeeFromClientIds(String employeeId) {
+		try {
+			String sqlStatement = " delete from ClientIds where employeeId=?";
+			PreparedStatement pstmt = con.prepareStatement(sqlStatement);
+			pstmt.setString(1, employeeId);
+			pstmt.executeUpdate();
+			System.out.println("employeeId deleted Successfully from ClientIds");
+		} catch (SQLException e) {
+			System.out.println(e);
+		}
+		
+	}
+
+	public void removeClientIdFromClientIds(String clientId) {
+		
+		try {
+			String sqlStatement = " delete from ClientIds where clientId=?";
+			PreparedStatement pstmt = con.prepareStatement(sqlStatement);
+			pstmt.setString(1, clientId);
+			pstmt.executeUpdate();
+			System.out.println("clientId deleted Successfully from ClientIds");
+		} catch (SQLException e) {
+			System.out.println(e);
+		}
+	}
+
 	
 
 }

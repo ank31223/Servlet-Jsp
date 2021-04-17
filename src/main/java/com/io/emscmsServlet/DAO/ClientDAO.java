@@ -415,4 +415,34 @@ public class ClientDAO {
 	}
 
 
+	public void removeEmployeeIdFromEmployeeIds(String employeeId) {
+		try {
+			String query = "delete from EmployeeIds where employeeId=?";
+			pst = con.prepareStatement(query);
+			pst.setString(1,employeeId);
+			pst.executeUpdate();
+			System.out.println("employeeId Deleted Successfully from EmployeeIds");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+
+	public void deleteClientFromEmployeeIds(String clientId) {
+		try {
+			String query = "delete from EmployeeIds where clientId=?";
+			pst = con.prepareStatement(query);
+			pst.setString(1, clientId);
+			pst.executeUpdate();
+			System.out.println("ClientId Deleted Successfully from EmployeeIds");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	
+
+
 }

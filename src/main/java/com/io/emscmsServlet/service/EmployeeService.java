@@ -34,6 +34,12 @@ public interface EmployeeService {
 	void deleteClientFromEmployee(String employeeId, String clientId);
 
 	void deleteEmployeeFromClientForClient(String employeeId, String clientId);
+	
+	String getEmployeeIdByName(String employeeName);
+	
+	void deleteEmployeeIdFromAll(String employeeId);
+
+	void removeClientIdFromClientIds(String clientId);
 
 
 }

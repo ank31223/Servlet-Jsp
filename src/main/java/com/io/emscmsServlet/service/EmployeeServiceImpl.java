@@ -113,6 +113,23 @@ public class EmployeeServiceImpl implements EmployeeService {
 		employeeDAO.deleteClientFromEmployee(employeeId, clientId);
 		
 	}
+	
+	public String getEmployeeIdByName(String employeeName) {
+		return employeeDAO.getEmployeeById(employeeName).getId();
+	}
+
+	@Override
+	public void deleteEmployeeIdFromAll(String employeeId) {
+		employeeDAO.deleteEmployeeFromClientIds(employeeId);
+		clientService.removeEmployeeIdFromEmployeeIds(employeeId);
+		
+	}
+
+	@Override
+	public void removeClientIdFromClientIds(String clientId) {
+		employeeDAO.removeClientIdFromClientIds(clientId);
+		
+	}
 
 
 }

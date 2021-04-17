@@ -88,6 +88,8 @@ public class GetAllClientsServlet extends HttpServlet {
 
 	private void deleteClient(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		String clientName=req.getParameter("clientName");
+		String clientId=clientService.getClientIdByName(clientName);
+		clientService.deleteClientIdFromAll(clientId);
 		clientService.removeClient(clientName);
 		res.sendRedirect("/servletProject/getAllClients");
 		
