@@ -58,9 +58,7 @@ a {
 	<c:set var="i" value="ANKIT" scope="application"></c:set>
 
 	<div id="container">
-		<h1>
-			<c:out value="${i}"></c:out>
-		</h1>
+		
 		<div id="ems">
 			<a href="/servletProject/getAllClients">Client Management System</a>
 		</div>
